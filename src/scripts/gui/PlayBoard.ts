@@ -23,7 +23,7 @@ export class PlayBoard extends PIXI.Container {
     private enemiesTimerId:any;
     private bonusesTimerId:any;
 
-    private isRandomEnemiesdDone = 0;
+    private isRandomEnemiesDone = 0;
 
     // class PlayBoard is singleton
     public static getInstance(): PlayBoard {
@@ -174,10 +174,10 @@ export class PlayBoard extends PIXI.Container {
 
         this.enemiesTimerId = setInterval(() => {
             this.setRandomEnemies();
-            this.isRandomEnemiesdDone++;
+            this.isRandomEnemiesDone++;
 
             // stop show random enemies
-            if(this.isRandomEnemiesdDone == 3){
+            if(this.isRandomEnemiesDone == 3){
                 clearTimeout(this.enemiesTimerId);
             }
         }, 8000);
@@ -237,7 +237,7 @@ export class PlayBoard extends PIXI.Container {
 
     }
 
-    // set random bonus on the tile
+    // set random enemies on the tile
     setRandomEnemies() {
         for (let index = 0; index < this.map.length; index++) {
             for (let nestedIndex = 0; nestedIndex < this.map[index].length; nestedIndex++) {
