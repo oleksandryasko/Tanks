@@ -1,6 +1,5 @@
 import {EventEmitter} from 'events';
 
-
 class Keyboard extends EventEmitter {
 
     private left:any;
@@ -83,7 +82,6 @@ class Keyboard extends EventEmitter {
         );
         return key;
     }
-
 }
 
 export default new Keyboard();

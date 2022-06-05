@@ -19,7 +19,6 @@ export default class Bullet extends PIXI.Sprite {
     topBoard:Array<any>;
     bottomBoard:Array<any>;
 
-
     bullet_ticker: PIXI.Ticker;
 
     _type:string;
@@ -50,8 +49,6 @@ export default class Bullet extends PIXI.Sprite {
             this.stopShoot();
             this.removeAllListeners();
         });
-
-
     }
 
     setDirection(direction: string, speed: number, xPos: number, yPos: number) {
@@ -103,13 +100,11 @@ export default class Bullet extends PIXI.Sprite {
 
         this.bullet_ticker.add((delta) => {
             callback(delta);
-
             
             this.collisionBoard();
             this.collisionPlayer();
             this.collisionEnemies();
         });
-
         this.bullet_ticker.start();
     }
 
@@ -122,7 +117,6 @@ export default class Bullet extends PIXI.Sprite {
         if (this.y > ScreenSize.canvasHeight * 0.5) {
             this.boardCollisionLogic(this.bottomBoard);
         }
-
     }
 
     // what to do if bullet hit to players
@@ -160,7 +154,6 @@ export default class Bullet extends PIXI.Sprite {
 
                 }
             }
-
         }
     }
 
@@ -195,7 +188,6 @@ export default class Bullet extends PIXI.Sprite {
                                 points: 100,
                             },
                         }));
-
                     }
                     this.stopShoot();
                 }

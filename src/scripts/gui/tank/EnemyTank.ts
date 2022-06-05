@@ -37,7 +37,6 @@ export class EnemyTank extends Tanks {
         this.rotationPosition = 'down';
 
         this.move();
-
     }
 
     move() {
@@ -47,33 +46,29 @@ export class EnemyTank extends Tanks {
 
     }
 
-    setPriorityRandomWay(upWeight:number, dowmWeight:number, rightWeight:number, leftWeight:number){
-        let getRandomWay:string;
+    setPriorityRandomWay(upWeight: number, dowmWeight: number, rightWeight: number, leftWeight: number) {
+        let getRandomWay: string;
 
-        // setInterval(() => {
-            getRandomWay = CollisionManager.setRandom([{
-                way: "down",
-                weight: dowmWeight
-            },
-            {
-                way: "up",
-                weight: upWeight
-            },
-            {
-                way: "right",
-                weight: rightWeight
-            },
-            {
-                way: "left",
-                weight: leftWeight
-            },
-            ]);
-
-        // }, 1500);
+        getRandomWay = CollisionManager.setRandom([{
+            way: "down",
+            weight: dowmWeight
+        },
+        {
+            way: "up",
+            weight: upWeight
+        },
+        {
+            way: "right",
+            weight: rightWeight
+        },
+        {
+            way: "left",
+            weight: leftWeight
+        },
+        ]);
 
         return getRandomWay;
-        // this.runEnemy( () => { this.go(getRandomWay); });
-            
+
     }
 
     runEnemy() {
@@ -128,7 +123,6 @@ export class EnemyTank extends Tanks {
         }, 0);
 
         this.tricker.start();
-        
     }
 
     // remove and destroy all timers, trickers and container
@@ -138,7 +132,6 @@ export class EnemyTank extends Tanks {
         this.tricker.destroy();
         clearTimeout(this.timerId);
         clearTimeout(this.intervalTimerId);
-
     }
     
 }

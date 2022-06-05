@@ -63,11 +63,6 @@ export abstract class Tanks extends PIXI.Sprite {
 
         this.alpha = 0;
 
-        // const gr  = new PIXI.Graphics();
-        // gr.lineStyle(1, 0xFFBD01, 1);
-        // gr.drawRect( this.x -20, this.y-20, this.width+20, this.height+20);
-        // this.addChild(gr);
-
         addEventListener(EventName.STOP_ANY_ACTIONS, ()=> {
             this.stopAction()
         });
@@ -121,7 +116,6 @@ export abstract class Tanks extends PIXI.Sprite {
                 CollisionManager.rectsColliding(tile, this, this.rotationPosition);
             }
         }
-
     }
 
     // what to do if collision happens beetwen tanks and bonuses
@@ -156,7 +150,6 @@ export abstract class Tanks extends PIXI.Sprite {
 
                 bonus.destroy();
                 PlayBoard.getInstance().bonuses.splice(PlayBoard.getInstance().bonuses.indexOf(bonus), 1);
-
             }
         }
     }
@@ -211,7 +204,6 @@ export abstract class Tanks extends PIXI.Sprite {
         }
         if (this.type == "enemy_tank") {
             this.vx = this.vy = this.enemySpeed;
-           
         }
     }
 
@@ -223,7 +215,6 @@ export abstract class Tanks extends PIXI.Sprite {
             this.bombSpeed = 0;
         }
         this.isFire = false;
-
     }
 
     // add helthy bonus for the tanks
@@ -261,7 +252,6 @@ export abstract class Tanks extends PIXI.Sprite {
         let getSound = LoadingView.loader.resources[soundsName];
         const sound = Sound.from(getSound);
         sound.play(); 
-
     }
 
 }

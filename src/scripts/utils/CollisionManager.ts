@@ -39,8 +39,6 @@ class CollisionManager {
 
             }
         }
-
-
     }
 
     // set array with correct way including weight of the way
@@ -85,7 +83,6 @@ class CollisionManager {
 
         container.addChild(animation);
     }
-
 }
 
 type EnemyConfig = {

@@ -3,7 +3,6 @@ import *as PIXI from 'pixi.js';
 import { ScreenSize } from '../../sys/enums/generalMainEnums';
 import { LoadingView } from '../loading/LoadingView';
 import { gsap } from "gsap";
-import { Sound } from '@pixi/sound';
  
 export class GamePoints extends PIXI.Sprite {
 
@@ -28,7 +27,6 @@ export class GamePoints extends PIXI.Sprite {
         addEventListener(EventName.GAME_OVER, ()=>{
             this.gameOverAnimation();
         });
-
     }
 
     initLoadingText(): PIXI.Text {
@@ -56,6 +54,4 @@ export class GamePoints extends PIXI.Sprite {
         gsap.to(this.scale, {x: 2, y: 2, duration: 4});
         gsap.to(this, {x: ScreenSize.canvasWidht * 0.5, duration: 8});
     }
-
-    
 }

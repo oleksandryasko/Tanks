@@ -10,6 +10,5 @@ export class Immortal extends PIXI.Sprite {
         super(texture4);
         this.alpha = 0;
         this.scale.set(0.4, 0.4);
-
     }
 }

@@ -17,8 +17,6 @@ export class IntroView extends PIXI.Container {
         this.isHardMode = false;
 
         this.addElements();
-
-
     }
 
     addElements():void {
@@ -48,7 +46,6 @@ export class IntroView extends PIXI.Container {
         container.addChild(gameLogo);
 
         this.addHardModeBox(container, gameLogo.x, gameLogo.y+gameLogo.height);
-        
     }
 
     // add btn for starting the game

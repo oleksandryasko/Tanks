@@ -68,7 +68,6 @@ export class LoadingView extends PIXI.Container {
         });
 
         this.addLoader(loaderBg, loaderBar, loadSprite)
-
     }
 
     initLoadingText(xPos:number, yPos:number):PIXI.Text {

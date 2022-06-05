@@ -29,8 +29,7 @@ export class GameTank  {
         GameTank._render.stage.sortableChildren = true;
         GameTank._render.stage.addChild(this.initGameName());  // add game name to the top
         GameTank._render.stage.addChild(new LoadingView());    // add preloader
-        GameTank._render.stage.addChild(_gameContainer);       // add main container (include IntroView, MainState, EndGame)
-
+        GameTank._render.stage.addChild(_gameContainer);       // add main container (include IntroView, MainState, EndGame, WinContainer)
     };
 
     initGameName():PIXI.Text {
