@@ -40,7 +40,6 @@ export class EnemyTank extends Tanks {
     }
 
     move() {
-
         // bot mode
         this.runEnemy();
 
